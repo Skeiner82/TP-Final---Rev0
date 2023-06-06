@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Piccolo Bambino</title>
+    <link rel="shortcut icon" href="/img/Il Piccolo Bambino.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Servicio</a>
+            <a href="horario.html">Horarios de Atencion</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <section class="textos-header">
+        <h1>Il Piccolo Bambino</h1>
+        <h2>Alquiler de mobiliario infantil para eventos </h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C230.25,199.84 307.56,13.33 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>
+    <main>
+        <section class="contenedor">
+        <h2 class="titulo">Contacto</h2>
+        <p>Completa el formulario a continuación para ponerte en contacto con nosotros:</p>
+       
+          <form id="contacto-form">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+      
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" required>
+      
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" required>
+      
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="4" maxlength="400" required></textarea>
+      
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+
+      <script>
+        // Obtener el formulario
+        var form = document.getElementById('contacto-form');
+
+        // Escuchar el evento submit del formulario
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+
+            // Obtener los valores de los campos del formulario
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var celular = document.getElementById('celular').value;
+            var ciudad = document.getElementById('ciudad').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            // Validar si se han completado todos los campos
+            if (nombre && email && celular && ciudad && mensaje) {
+                // Mostrar el mensaje de agradecimiento personalizado
+                var mensajePersonalizado = 'Gracias por completar el formulario. En breve nos estaremos contactando con vos.';
+                alert(mensajePersonalizado);
+                
+                // Restablecer los valores de los campos del formulario
+                form.reset();
+            } else {
+                // Mostrar un mensaje de error si algún campo está vacío
+                alert('Por favor, completa todos los campos del formulario.');
+            }
+        });
+    </script>
+</body>
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-foo">
+            <h4>Movil</h4>
+            <p>+54 9 336 4567810</p>
+        </div>
+   
+        <div class="content-foo">
+            <h4>Email</h4>
+            <p>contacto@ilpiccolobambino.com.ar</p>
+        </div>
+   
+        <div class="content-foo">
+            <h4>Direccion</h4>
+            <p>Av. Siempre Viva 1234</p>
+         </div>
+    </div>
+    <h2 class="titulo-final"> ©Copyright Sebastian Keiner</h2>
+
+    <div class="redes-sociales">
+        <a href="https://www.instagram.com/tu_perfil_de_instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/tu_perfil_de_facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/tunumerodetelefono" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      
+</footer>
+</html>
